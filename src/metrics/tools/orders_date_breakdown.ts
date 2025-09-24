@@ -1,0 +1,108 @@
+import type { McpServerTool } from '../../server/types.js'
+import dateBreakdownTool from './queries/date_breakdown.js'
+
+
+
+const byValues = [
+  'order.approved_at',
+  'order.archived_at',
+  'order.cancelled_at',
+  'order.created_at',
+  'order.current_date',
+  'order.fulfillment_updated_at',
+  'order.payment_updated_at',
+  'order.placed_at',
+  'order.updated_at',
+  'resource_errors.created_at',
+  'resource_errors.updated_at',
+  'shipments.cancelled_at',
+  'shipments.created_at',
+  'shipments.on_hold_at',
+  'shipments.packing_at',
+  'shipments.picking_at',
+  'shipments.ready_to_ship_at',
+  'shipments.shipped_at',
+  'shipments.updated_at'
+] as const
+
+
+const fieldValues = [
+  'customer.email',
+  'customer.group_name',
+  'customer.id',
+  'line_items.code',
+  'line_items.discount',
+  'line_items.id',
+  'line_items.item_id',
+  'line_items.options.id',
+  'line_items.options.quantity',
+  'line_items.options.total_amount',
+  'line_items.options.unit_amount',
+  'line_items.options_amount',
+  'line_items.quantity',
+  'line_items.tax_amount',
+  'line_items.tax_rate',
+  'line_items.total_amount',
+  'line_items.unit_amount',
+  'market.id',
+  'market.number',
+  'order.adjustment_amount',
+  'order.adjustment_tax_amount',
+  'order.adjustment_taxable_amount',
+  'order.discount_amount',
+  'order.duty_amount',
+  'order.gift_card_amount',
+  'order.gift_card_code',
+  'order.id',
+  'order.line_item_options_count',
+  'order.number',
+  'order.payment_method_amount',
+  'order.payment_method_tax_amount',
+  'order.payment_method_taxable_amount',
+  'order.reference',
+  'order.reference_origin',
+  'order.refunds_total_amount_with_taxes',
+  'order.seconds_in_approved',
+  'order.seconds_in_draft',
+  'order.seconds_in_placed',
+  'order.shipments_count',
+  'order.shipping_amount',
+  'order.shipping_taxable_amount',
+  'order.skus_count',
+  'order.subtotal_amount',
+  'order.subtotal_tax_amount',
+  'order.subtotal_taxable_amount',
+  'order.total_amount',
+  'order.total_amount_with_taxes',
+  'order.total_amount_with_taxes_net_of_refunds',
+  'order.total_tax_amount',
+  'order.total_taxable_amount',
+  'refunds.amount',
+  'refunds.id',
+  'refunds.number',
+  'resource_errors.code',
+  'resource_errors.id',
+  'resource_errors.message',
+  'shipments.id',
+  'shipments.number',
+  'shipments.reference',
+  'shipments.reference_origin',
+  'shipments.seconds_in_picking',
+  'shipments.seconds_in_ready_to_ship',
+  'shipments.shipping_category.id',
+  'shipments.shipping_category.reference',
+  'shipments.shipping_category.reference_origin',
+  'shipments.shipping_method.id',
+  'shipments.shipping_method.reference',
+  'shipments.shipping_method.reference_origin',
+  'shipments.stock_location.id',
+  'shipments.stock_location.reference',
+  'shipments.stock_location.reference_origin'
+] as const
+
+
+
+const ordersDateBreakdown: McpServerTool = dateBreakdownTool('orders', { byValues, fieldValues })
+
+
+export default ordersDateBreakdown

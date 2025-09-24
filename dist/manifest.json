@@ -1,0 +1,65 @@
+{
+  "manifest_version": "0.1",
+  "name": "Commerce Layer Metrics",
+  "version": "1.0.0",
+  "description": "Commerce Layer Metrics API",
+  "long_description": "The Metrics Local MCP Server exposes a set of tools to interact with Commerce Layer [Metrics API](https://docs.commercelayer.io/metrics) and enables you to extract almost any kind of data information from your organization order, return, or cart history.",
+  "author": {
+    "name": "Pierluigi Viti",
+    "email": "pierluigi@commercelayer.io"
+  },
+  "homepage": "https://commercelayer.io",
+  "documentation": "https://docs.commercelayer.io/metrics",
+  "icon": "favicon.ico",
+  "screenshots": [],
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ],
+      "env": {
+        "CL_CLIENT_ID": "${user_config.client_id}",
+        "CL_CLIENT_SECRET": "${user_config.client_secret}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "a",
+      "description": "a desc"
+    },
+    {
+      "name": "b",
+      "description": "b desc"
+    }
+  ],
+  "user_config": {
+    "client_id": {
+      "type": "string",
+      "title": "Client ID",
+      "description": "Authentication credentials Client ID",
+      "required": true,
+      "sensitive": true
+    },
+    "client_secret": {
+      "type": "string",
+      "title": "Client secret",
+      "description": "Authentication credentials Client secret",
+      "required": true,
+      "sensitive": true
+    }
+  },
+  "keywords": [
+    "mcp",
+    "agentic-commerce",
+    "commercelayer"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/commercelayer/mcp-server-metrics"
+  }
+}
