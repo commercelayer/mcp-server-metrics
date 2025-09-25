@@ -1,6 +1,5 @@
 build/
 dist/server/**
-dist/package*.json
 dist/node_modules
 mcpb/*.*
 

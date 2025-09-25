@@ -31,17 +31,17 @@ The Metrics Local MCP Server exposes a set of tools to interact with Commerce La
 
 2. **Install dependencies:**
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. **Build the project:**
    ```bash
-   npm run build
+   pnpm build
    ```
 
 4. **Create the server:**
    ```bash
-   npm run dist
+   pnpm dist
    ```
    The compiled files will be available in the `dist/` directory and can be used to setup the MCP local server in the preferred AI agent ([Claude Dekstop](https://modelcontextprotocol.io/docs/develop/connect-local-servers), OpenAI Chat-GPT ...).
 
