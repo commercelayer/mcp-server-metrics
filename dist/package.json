@@ -9,11 +9,12 @@
     "test": "tsx --test \"./specs/**/*.spec.ts\"",
     "dist:clean": "rm -rf dist/server && rm -rf dist/node_modules",
     "dist:copy": "cp -r build dist/server && cp -r src/metrics/resources/docs dist/server/metrics/resources && cp ./package*.json dist",
+    "dist:manifest": "tsx gen/manifest.ts",
     "dist:exec": "chmod 755 dist/server/index.js",
     "dist:dep": "cd dist && npm install --omit=dev && cd ..",
     "dist:test": "tsx --test \"./specs/**/*.spec.dist.ts\"",
     "dist:mcpb": "mkdir -p mcpb && mcpb pack dist mcpb/commercelayer-metrics.mcpb",
-    "dist": "pnpm dist:clean && pnpm dist:copy && pnpm dist:exec && pnpm dist:dep && pnpm dist:test",
+    "dist": "pnpm dist:clean && pnpm dist:copy && pnpm dist:manifest && pnpm dist:exec && pnpm dist:dep && pnpm dist:test",
     "mcpb": "pnpm dist && pnpm dist:mcpb",
     "release": "pnpm build && pnpm lint && pnpm test && pnpm mcpb"
   },

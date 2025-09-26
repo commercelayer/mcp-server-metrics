@@ -33,7 +33,12 @@ export abstract class McpServerBase extends McpServer {
           tool.name, {
           title: tool.title,
           description: tool.description,
-          inputSchema: tool.inputSchema
+          inputSchema: tool.inputSchema,
+          annotations: {
+            title: tool.title,
+            readOnlyHint: tool.readonly,
+            idempotentHint: tool.readonly
+          }
         },
           tool.callback
         )
