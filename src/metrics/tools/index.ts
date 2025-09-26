@@ -9,7 +9,7 @@ export const tools: McpServerTool[] = [
   ...queriesTools,
   ...analysisTools,
   ...useCasesTools
-]
+].map(tool => ({ ...tool, readonly: true }))
 
 
 export default tools
