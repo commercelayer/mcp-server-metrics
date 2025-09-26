@@ -2,7 +2,7 @@
   "manifest_version": "0.1",
   "name": "Commerce Layer Metrics",
   "version": "1.0.0",
-  "description": "Commerce Layer Metrics API",
+  "description": "Commerce Layer Metrics MCP server",
   "long_description": "The Metrics Local MCP Server exposes a set of tools to interact with Commerce Layer [Metrics API](https://docs.commercelayer.io/metrics) and enables you to extract almost any kind of data information from your organization order, return, or cart history.",
   "author": {
     "name": "Pierluigi Viti",
@@ -28,12 +28,136 @@
   },
   "tools": [
     {
-      "name": "a",
-      "description": "a desc"
+      "name": "orders-breakdown",
+      "description": "Run the breakdown function on orders"
     },
     {
-      "name": "b",
-      "description": "b desc"
+      "name": "orders-date-breakdown",
+      "description": "Run the date-breakdown function on orders"
+    },
+    {
+      "name": "orders-search",
+      "description": "Run the search function on orders"
+    },
+    {
+      "name": "orders-stats",
+      "description": "Run the stats function on orders"
+    },
+    {
+      "name": "carts-breakdown",
+      "description": "Run the breakdown function on carts"
+    },
+    {
+      "name": "carts-date-breakdown",
+      "description": "Run the date-breakdown function on carts"
+    },
+    {
+      "name": "carts-search",
+      "description": "Run the search function on carts"
+    },
+    {
+      "name": "carts-stats",
+      "description": "Run the stats function on carts"
+    },
+    {
+      "name": "returns-breakdown",
+      "description": "Run the breakdown function on returns"
+    },
+    {
+      "name": "returns-date-breakdown",
+      "description": "Run the date-breakdown function on returns"
+    },
+    {
+      "name": "returns-search",
+      "description": "Run the search function on returns"
+    },
+    {
+      "name": "returns-stats",
+      "description": "Run the stats function on returns"
+    },
+    {
+      "name": "fbt",
+      "description": "Frequently Bought Together, FBTs are a type of analysis query that allows to retrieve the items that most frequently have been added as line items in the same orders as a specified item (SKU or bundle) or array of items"
+    },
+    {
+      "name": "best-selling-products-by-market",
+      "description": "How to use the Metrics API to get the Top N best-selling products for each of your organization's market"
+    },
+    {
+      "name": "customers_that_bought_a_specific_product",
+      "description": "How to use the Metrics API to get the total number of customers that bought a specific product or bundle"
+    },
+    {
+      "name": "frequently-bought-together-products",
+      "description": "How to use the Metrics API to get the products that have been most frequently bought together with other ones"
+    },
+    {
+      "name": "last-carts-with-a-specific-product-from-a-specific-market",
+      "description": "How to use the Metrics API to get the most recently created carts containing a specific SKU, from a specific market"
+    },
+    {
+      "name": "latest-archived-orders",
+      "description": "How to use the Metrics API to get the most recently archived orders"
+    },
+    {
+      "name": "latest-placed-orders-from-customers-with-specific-email-domains",
+      "description": "How to use the Metrics API to get the last placed orders containing specific email domains in the aggregated details"
+    },
+    {
+      "name": "number-of-products-per-order-by-country",
+      "description": "How to use the Metrics API to get mixed stats about the number of SKUs included in the orders of your organization, grouped by different countries"
+    },
+    {
+      "name": "orders-associated-with-a-specific-promotion",
+      "description": "How to use the Metrics API to get the total number of orders that triggered a specific promotion"
+    },
+    {
+      "name": "orders-by-bundle",
+      "description": "How to use the Metrics API to get the total number of orders containing a bundle, grouped by the bundle name"
+    },
+    {
+      "name": "orders-by-currency",
+      "description": "How to use the Metrics API to get the total number of orders of your organization, grouped by different currencies"
+    },
+    {
+      "name": "orders-by-day",
+      "description": "How to use the Metrics API to get the total number of orders of your organization, grouped by day"
+    },
+    {
+      "name": "orders-by-repeat-customer",
+      "description": "How to use the Metrics API to get the total number of orders of your organization, grouped by customers that bought from you more than once"
+    },
+    {
+      "name": "orders-by-resource-error-code-and-message",
+      "description": "How to use the Metrics API to check the errors associated with the orders of your organization (if any)"
+    },
+    {
+      "name": "orders-by-shipment-status-and-shipping-method-name",
+      "description": "How to use the Metrics API to get the total number of orders of your organization, grouped by the associated shipment status and the related shipping method name"
+    },
+    {
+      "name": "orders-by-status-and-payment-status",
+      "description": "How to use the Metrics API to get the total number of orders of your organization, grouped by their status and the related payment status"
+    },
+    {
+      "name": "orders-paid-with-gift-cards",
+      "description": "How to use the Metrics API to get the total number of orders that were paid using a gift card"
+    },
+    {
+      "name": "refunds-by-country-and-currency",
+      "description": "How to use the Metrics API to get the total number of refunds of your organization, grouped by the different countries and currencies"
+    },
+    {
+      "name": "returns-per-year-by-destination-city",
+      "description": "How to use the Metrics API to get the total number of returns requested for your orders, grouped by year and destination city"
+    },
+    {
+      "name": "shipments-average-time-in-picking",
+      "description": "How to use the Metrics API to get the average time your shipments stay in picking status before being packed"
+    },
+    {
+      "name": "top-10-spenders-by-currency",
+      "description": "How to use the Metrics API to get the top spenders among your customers and know how their total purchase amount is divided by currency"
     }
   ],
   "user_config": {

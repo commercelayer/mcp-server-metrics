@@ -20,7 +20,8 @@ type McpServerToolType<InputArgs extends ZodRawShape, OutputArgs extends ZodRawS
   description: string,
   inputSchema: InputArgs,
   outputSchema?: OutputArgs,
-  callback: ToolCallback<InputArgs>
+  callback: ToolCallback<InputArgs>,
+  readonly?: boolean
 }
 
 export type McpServerTool = McpServerToolType<ZodRawShape, ZodRawShape>
