@@ -6,7 +6,8 @@
   "long_description": "The Metrics Local MCP Server exposes a set of tools to interact with Commerce Layer [Metrics API](https://docs.commercelayer.io/metrics) and enables you to extract almost any kind of data information from your organization order, return, or cart history.",
   "author": {
     "name": "Pierluigi Viti",
-    "email": "pierluigi@commercelayer.io"
+    "email": "pierluigi@commercelayer.io",
+    "url": "https://github.com/pviti"
   },
   "homepage": "https://commercelayer.io",
   "documentation": "https://docs.commercelayer.io/metrics",
