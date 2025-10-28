@@ -2,7 +2,16 @@
   "name": "@commercelayer/mcp-server-metrics",
   "version": "1.0.0",
   "description": "Commerce Layer Metrics MCP server",
+  "type": "module",
   "main": "index.js",
+  "author": "Pierluigi Viti <pierluigi@commercelayer.io>",
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./tools": "./metrics/tools/index.js",
+    "./resources": "./metrics/resources/index.js",
+    "./prompts": "./metrics/prompts/index.js"
+  },
   "scripts": {
     "build": "rm -rf build && tsc && chmod 755 build/index.js",
     "lint": "eslint src --ext .ts --config .eslintrc",
@@ -23,9 +32,6 @@
     "mcp",
     "commercelayer"
   ],
-  "author": "Pierluigi Viti <pierluigi@commercelayer.io>",
-  "license": "MIT",
-  "type": "module",
   "files": [
     "build"
   ],
@@ -39,16 +45,16 @@
   "dependencies": {
     "@commercelayer/js-auth": "^6.7.2",
     "@commercelayer/sdk": "^6.49.0",
-    "@modelcontextprotocol/sdk": "^1.20.0",
+    "@modelcontextprotocol/sdk": "^1.20.2",
     "zod": "^3.25.76"
   },
   "devDependencies": {
     "@anthropic-ai/mcpb": "1.1.0",
     "@commercelayer/eslint-config-ts": "^2.2.0",
-    "@types/node": "^24.7.2",
+    "@types/node": "^24.9.1",
     "dotenv": "^17.2.3",
     "eslint": "^8.57.1",
-    "pnpm": "^10.18.2",
+    "pnpm": "^10.19.0",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   },
