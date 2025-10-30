@@ -51,10 +51,10 @@
   "devDependencies": {
     "@anthropic-ai/mcpb": "1.1.0",
     "@commercelayer/eslint-config-ts": "^2.2.0",
-    "@types/node": "^24.9.1",
+    "@types/node": "^24.9.2",
     "dotenv": "^17.2.3",
     "eslint": "^8.57.1",
-    "pnpm": "^10.19.0",
+    "pnpm": "^10.20.0",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   },
