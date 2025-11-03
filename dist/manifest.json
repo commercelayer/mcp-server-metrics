@@ -11,7 +11,7 @@
   },
   "homepage": "https://commercelayer.io",
   "documentation": "https://docs.commercelayer.io/metrics",
-  "icon": "favicon.ico",
+  "icon": "cl-logo.png",
   "screenshots": [],
   "server": {
     "type": "node",
