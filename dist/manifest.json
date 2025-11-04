@@ -1,5 +1,5 @@
 {
-  "manifest_version": "0.1",
+  "manifest_version": "0.2",
   "name": "Commerce Layer Metrics",
   "version": "1.0.0",
   "description": "Commerce Layer Metrics MCP server",
@@ -11,7 +11,7 @@
   },
   "homepage": "https://commercelayer.io",
   "documentation": "https://docs.commercelayer.io/metrics",
-  "icon": "cl-logo.png",
+  "icon": "icon.png",
   "screenshots": [],
   "server": {
     "type": "node",
@@ -165,14 +165,14 @@
     "client_id": {
       "type": "string",
       "title": "Client ID",
-      "description": "Authentication credentials Client ID",
+      "description": "API credentials Client ID",
       "required": true,
       "sensitive": true
     },
     "client_secret": {
       "type": "string",
       "title": "Client secret",
-      "description": "Authentication credentials Client secret",
+      "description": "API credentials Client secret",
       "required": true,
       "sensitive": true
     }

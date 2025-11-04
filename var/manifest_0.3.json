@@ -1,0 +1,151 @@
+{
+  "manifest_version": "0.3",
+  "name": "My MCP Extension",
+  "display_name": "My Awesome MCP Extension",
+  "version": "1.0.0",
+  "description": "A brief description of what this extension does",
+  "long_description": "A detailed description that can include multiple paragraphs explaining the extension's functionality, use cases, and features. It supports basic markdown.",
+  "author": {
+    "name": "Your Name",
+    "email": "yourname@example.com",
+    "url": "https://your-website.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/my-mcp-extension.git"
+  },
+  "homepage": "https://example.com/my-extension",
+  "documentation": "https://docs.example.com/my-extension",
+  "support": "https://github.com/your-username/my-extension/issues",
+  "icon": "icon.png",
+  "icons": [
+    {
+      "src": "assets/icons/icon-16-light.png",
+      "size": "16x16",
+      "theme": "light"
+    },
+    {
+      "src": "assets/icons/icon-16-dark.png",
+      "size": "16x16",
+      "theme": "dark"
+    }
+  ],
+  "screenshots": [
+    "assets/screenshots/screenshot1.png",
+    "assets/screenshots/screenshot2.png"
+  ],
+  "localization": {
+    "resources": "custom-directory-for-mcpb-resources/${locale}.json",
+    "default_locale": "en-US"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["server/index.js"],
+      "env": {
+        "ALLOWED_DIRECTORIES": "${user_config.allowed_directories}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "search_files",
+      "description": "Search for files in a directory"
+    }
+  ],
+  "prompts": [
+    {
+      "name": "poetry",
+      "description": "Have the LLM write poetry",
+      "arguments": ["topic"],
+      "text": "Write a creative poem about the following topic: ${arguments.topic}"
+    }
+  ],
+  "tools_generated": true,
+  "keywords": ["api", "automation", "productivity"],
+  "license": "MIT",
+  "privacy_policies": ["https://example.com/privacy"],
+  "compatibility": {
+    "claude_desktop": ">=1.0.0",
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "python": ">=3.8",
+      "node": ">=16.0.0"
+    }
+  },
+  "user_config": {
+    "allowed_directories": {
+      "type": "directory",
+      "title": "Allowed Directories",
+      "description": "Directories the server can access",
+      "multiple": true,
+      "required": true,
+      "default": ["${HOME}/Desktop"]
+    },
+    "api_key": {
+      "type": "string",
+      "title": "API Key",
+      "description": "Your API key for authentication",
+      "sensitive": true,
+      "required": false
+    },
+    "max_file_size": {
+      "type": "number",
+      "title": "Maximum File Size (MB)",
+      "description": "Maximum file size to process",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    }
+  },
+  "_meta": {
+    "com.microsoft.windows": {
+      "package_family_name": "MyMcpMSIXPackage_51g09708xawrw",
+      "static_responses": {
+        "initialize": {
+          "capabilities": {},
+          "instructions": "When the user wants to search files, use the search_files tool but only after asking them whether the files are local.",
+          "protocolVersion": "2025-06-18",
+          "serverInfo": {
+            "name": "MyMCPExtension",
+            "title": "My MCP Extension - Pro Edition",
+            "version": "1.0.0"
+          }
+        },
+        "tools/list": {
+          "tools": [
+            {
+              "name": "search_files",
+              "title": "File search",
+              "description": "Search for files in a directory",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "fileSpec": {
+                    "type": "string",
+                    "description": "The file name to search for. Wildcards are supported"
+                  }
+                },
+                "required": ["fileSpec"]
+              },
+              "outputSchema": {
+                "type": "object",
+                "properties": {
+                  "searchResults": {
+                    "type": "array",
+                    "description": "The list of file paths that were found",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
