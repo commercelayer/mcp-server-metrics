@@ -161,3 +161,4 @@ Also known as Frequently Bought Together, FBTs are a type of analysis query that
 - [Commerce Layer Metrics](https://docs.commercelayer.io/metrics)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 - [Claude Desktop](https://claude.ai/download)
+- [Commerce Layer privacy policy](https://commercelayer.io/legal-embed/privacy-policy) 
