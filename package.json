@@ -35,9 +35,6 @@
   "files": [
     "build"
   ],
-  "bin": {
-    "cl-mcp": "./dist/server/index.js"
-  },
   "engines": {
     "node": ">=22",
     "pnpm": "10.x"
