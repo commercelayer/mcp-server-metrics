@@ -1,0 +1,19 @@
+## 1.0.0 (2025-11-11)
+
+### Features
+
+* first project commit ([ce0462a](https://github.com/commercelayer/mcp-server-metrics/commit/ce0462aedf3ebc2c6496aa42ca3c4a30484467e2))
+
+### Bug Fixes
+
+* fix dependencies ([16d9388](https://github.com/commercelayer/mcp-server-metrics/commit/16d9388c5219939238f3cd782e28b2df60323d6e))
+* fix server icon ([51ea8d7](https://github.com/commercelayer/mcp-server-metrics/commit/51ea8d7e4f2fe0c3b05e716769b783976d37b33c))
+* fix server icon ([10ac54c](https://github.com/commercelayer/mcp-server-metrics/commit/10ac54c112f3a9f52428ae610747104a443f1316))
+* fix version and add tools to manifest ([1a1c44f](https://github.com/commercelayer/mcp-server-metrics/commit/1a1c44f6cd50d95dc9f6f450f4d2ef368cbb044a))
+* remove bin file ([ccc1d06](https://github.com/commercelayer/mcp-server-metrics/commit/ccc1d0680721e58e634ec937f936c79dca797dfd))
+* update build and release scripts ([a7d4af9](https://github.com/commercelayer/mcp-server-metrics/commit/a7d4af9589d019e0a93ea912bf3a28a8bb489f6d))
+* update dependencies ([e68909f](https://github.com/commercelayer/mcp-server-metrics/commit/e68909f3ccaf8b039396d5f8ababde19e6a1390b))
+* update dependencies ([29c2af6](https://github.com/commercelayer/mcp-server-metrics/commit/29c2af6ffc23ffb514614bf55d2df238838313b2))
+* update dependencies ([97b62c3](https://github.com/commercelayer/mcp-server-metrics/commit/97b62c3877fd53c8c7027e9f76b7dae4278af2dd))
+* update dependencies ([d4d73d5](https://github.com/commercelayer/mcp-server-metrics/commit/d4d73d54e33b6c4cd5b6be2dbbde0554e7ab868a))
+* update manifest and update dependencies ([7927bb2](https://github.com/commercelayer/mcp-server-metrics/commit/7927bb23173d9ad018f643ae15d1956f28e94771))
