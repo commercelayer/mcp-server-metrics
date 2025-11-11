@@ -29,9 +29,9 @@ jobs:
         run: pnpm build
       - name: Run specs
         env:
-          CL_ORGANIZATION: sdk-test-org
-          CL_CLIENT_ID: ${{secrets.CL_CLIENT_ID}}
-          CL_DOMAIN: ${{secrets.CL_DOMAIN}}
+          CL_CLIENT_ID: ${{ secrets.CL_CLIENT_ID }}
+          CL_CLIENT_SECRET: ${{ secrets.CL_CLIENT_SECRET }}
+          CL_DOMAIN: ${{ secrets.CL_DOMAIN}}
         run: pnpm test
       - name: Release
         env:
