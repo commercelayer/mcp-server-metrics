@@ -8,9 +8,9 @@
   "license": "MIT",
   "exports": {
     ".": "./index.js",
-    "./tools": "./metrics/tools/index.js",
-    "./resources": "./metrics/resources/index.js",
-    "./prompts": "./metrics/prompts/index.js"
+    "./tools": "./lib/metrics/tools/index.js",
+    "./resources": "./lib/metrics/resources/index.js",
+    "./prompts": "./lib/metrics/prompts/index.js"
   },
   "scripts": {
     "build": "rm -rf lib && tsc",
