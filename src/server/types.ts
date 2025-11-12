@@ -60,3 +60,5 @@ export type McpServerResourceDynamic = {
 
 
 export type McpServerResource = McpServerResourceStatic | McpServerResourceDynamic
+
+export type McpServerPrompt = Record<string, any>

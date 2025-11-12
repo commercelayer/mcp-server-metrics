@@ -1,2 +1,9 @@
+import { McpServerPrompt } from "../../server/types.js"
 
-export const prompts = []
+
+
+const prompts: McpServerPrompt[] = []
+
+
+
+export default prompts
