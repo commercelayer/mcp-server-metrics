@@ -4,7 +4,7 @@
     "module": "nodenext",
     "moduleResolution": "Node16",
     "declaration": true,
-    "outDir": "./build",
+    "outDir": "./lib",
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
