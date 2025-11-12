@@ -1,4 +1,4 @@
-import { McpServerPrompt } from "../../server/types.js"
+import type { McpServerPrompt } from "../../server/types.js"
 
 
 

@@ -8,9 +8,21 @@
   "license": "MIT",
   "exports": {
     ".": "./index.js",
-    "./tools": "./metrics/tools/index.js",
-    "./resources": "./metrics/resources/index.js",
-    "./prompts": "./metrics/prompts/index.js"
+    "./tools": {
+      "default": "./lib/metrics/tools/index.js",
+      "types": "./lib/metrics/tools/index.d.ts"
+    },
+    "./resources": {
+      "default": "./lib/metrics/resources/index.js",
+      "types": "./lib/metrics/resources/index.d.ts"
+    },
+    "./prompts": {
+      "default": "./lib/metrics/prompts/index.js",
+      "types": "./lib/metrics/prompts/index.d.ts"
+    },
+    "./types": {
+      "types": "./lib/server/types.d.ts"
+    }
   },
   "scripts": {
     "build": "rm -rf lib && tsc",

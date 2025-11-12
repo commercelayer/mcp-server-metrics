@@ -1,5 +1,5 @@
-import test, { before, suite } from 'node:test'
-import { checkTestResult, getAccessToken, skipToolTest } from '../../util.js'
+import test, { suite } from 'node:test'
+import { checkTestResult, skipToolTest } from '../../util.js'
 import assert from 'node:assert'
 
 
@@ -169,7 +169,7 @@ suite(`Metrics Tools: ${toolsGroup}`, async () => {
 
   let accessToken = ''
 
-  before(async () => { accessToken = await getAccessToken() })
+  // before(async () => { accessToken = await getAccessToken() })
 
   for (const tool of tools) {
     test(tool.name, async (t) => {
@@ -180,7 +180,7 @@ suite(`Metrics Tools: ${toolsGroup}`, async () => {
       if (!toolData) skipToolTest(tool, t)
       else
       try {
-        const result = await tool.callback(toolData)
+        const result = await tool.callback(toolData, {})
         checkTestResult(result)
       } catch (error: any) {
         assert.fail(`Error in tool ${tool.name}: ${error.message || error}`)

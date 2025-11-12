@@ -61,9 +61,9 @@ const useCaseTool: McpServerTool = {
       date_to: z.string().datetime().describe('The upper limit of the date and time range used to filter the collected records (required if you specified date_from)')
     }).optional().describe('Narrow the results of the query by date or any other parameter available for filtering the selected resource')
   },
-  callback: async ({ payload, filter }) => {
+  callback: async ({ payload, filter }, { authInfo }) => {
     const query = buildQuery(payload, filter)
-    return callToolResult(await execMetricsTool('breakdown', query, 'orders'))
+    return callToolResult(await execMetricsTool(authInfo, 'breakdown', query, 'orders'))
   }
 }
 

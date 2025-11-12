@@ -34,9 +34,9 @@ const useCaseTool: McpServerTool = {
       item_ids: z.array(z.string()).describe('A list of SKU or bundle IDs associated as line items to one or more orders'),
     }).describe('Narrow the results of the query by date or any other parameter available for filtering the selected resource')
   },
-  callback: async ({ payload, filter }) => {
+  callback: async ({ payload, filter }, { authInfo }) => {
     const query = buildQuery(payload, filter)
-    return callToolResult(await execMetricsTool('fbt', query))
+    return callToolResult(await execMetricsTool(authInfo, 'fbt', query))
   }
 }
 

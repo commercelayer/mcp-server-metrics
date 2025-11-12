@@ -28,14 +28,14 @@ export default function searchTool(resource: MetricsResource, values: {
       }).describe('The body payload to use for the request'),
       filter: z.any().optional().describe('Narrow the results of the query by date or any other parameter available for filtering the selected resource')
     },
-    callback: async ({ payload, filter }) => {
+    callback: async ({ payload, filter }, { authInfo }) => {
 
       const query: MetricsQuery = {
         search: payload as MetricsQuerySearch,
         filter: filter as MetricsFilter
       }
 
-      return callToolResult(await execMetricsTool('search', query, resource))
+      return callToolResult(await execMetricsTool(authInfo, 'search', query, resource))
 
     }
   }

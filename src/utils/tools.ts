@@ -1,6 +1,7 @@
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js"
 import type { McpServerToolTextResponse } from "../server/types.js"
 import { authenticate } from "@commercelayer/js-auth"
+import { log } from "./log.js"
 
 
 
@@ -26,6 +27,7 @@ export async function getAccessToken(): Promise<string> {
 }
 
 
+/*
 export async function getSalesChannelAccessToken(): Promise<string> {
 
   const clientId = process.env.MCPC_CL_CLIENT_ID
@@ -38,3 +40,38 @@ export async function getSalesChannelAccessToken(): Promise<string> {
   else throw new Error('Empty env clientId or scope')
 
 }
+  */
+
+
+export function errorTextResponse(message: string, trace?: boolean): McpServerToolTextResponse {
+  if (trace) log(message)
+  return {
+    content: [
+      {
+        error: true,
+        type: 'text',
+        text: message
+      }
+    ]
+  }
+}
+
+
+export function mcpError(err: string | Error): never {
+  throw (typeof err === 'string')? new Error(err) : err
+}
+
+
+export function structuredTextResponse(structuredContent: Record<string, any>): McpServerToolTextResponse {
+  return {
+    content: [
+      {
+        error: false,
+        type: 'text',
+        text: JSON.stringify(structuredContent)
+      }
+    ],
+    structuredContent
+  }
+}
+

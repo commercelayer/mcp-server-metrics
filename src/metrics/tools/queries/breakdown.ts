@@ -30,14 +30,14 @@ export default function breakdownTool(resource: MetricsResource, values: {
       }).describe('The body payload to use for the request'),
       filter: z.any().optional().describe('Narrow the results of the query by date or any other parameter available for filtering the selected resource')
     },
-    callback: async ({ payload, filter }) => {
+    callback: async ({ payload, filter }, { authInfo }) => {
 
       const query: MetricsQuery = {
         breakdown: payload as MetricsQueryBreakdown,
         filter: filter as MetricsFilter
       }
 
-      return callToolResult(await execMetricsTool('breakdown', query, resource))
+      return callToolResult(await execMetricsTool(authInfo, 'breakdown', query, resource))
 
     }
   }

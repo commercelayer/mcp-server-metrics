@@ -34,9 +34,9 @@ const useCaseTool: McpServerTool = {
     // accessToken: z.string().describe('Access token to use with the API'),
     filter: z.any().optional().describe('Narrow the results of the query by date or any other parameter available for filtering the selected resource')
   },
-  callback: async ({ payload, filter }) => {
+  callback: async ({ payload, filter }, { authInfo }) => {
     const query = buildQuery(payload, filter)
-    return callToolResult(await execMetricsTool('stats', query, 'orders'))
+    return callToolResult(await execMetricsTool(authInfo, 'stats', query, 'orders'))
   }
 }
 

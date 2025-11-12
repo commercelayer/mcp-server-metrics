@@ -63,9 +63,9 @@ const useCaseTool: McpServerTool = {
       market_name: z.string().describe('Restrict the related search on the carts associated with the selected market only')
     }).optional().describe('Narrow the results of the query by date or any other parameter available for filtering the selected resource')
   },
-  callback: async ({ payload, filter }) => {
+  callback: async ({ payload, filter }, { authInfo }) => {
     const query = buildQuery(payload, filter)
-    return callToolResult(await execMetricsTool('search', query, 'orders'))
+    return callToolResult(await execMetricsTool(authInfo, 'search', query, 'orders'))
   }
 }
 

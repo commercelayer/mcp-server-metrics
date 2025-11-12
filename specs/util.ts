@@ -2,9 +2,9 @@ import { authenticate } from '@commercelayer/js-auth'
 import assert from "node:assert"
 import type { McpServerTool, McpServerToolTextResponse } from "../src/server/types"
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js"
+import { TestContext } from 'node:test'
 
 import dotenv from 'dotenv'
-import { TestContext } from 'node:test'
 dotenv.config()
 
 
