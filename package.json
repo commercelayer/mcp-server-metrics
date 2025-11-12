@@ -17,7 +17,7 @@
     "lint": "eslint src --ext .ts --config .eslintrc",
     "test": "tsx --test \"./specs/**/*.spec.ts\"",
     "dist:clean": "rm -rf dist/server && rm -rf dist/node_modules",
-    "dist:copy": "cp -r build dist/server && cp -r src/metrics/resources/docs dist/server/metrics/resources && cp ./package*.json dist",
+    "dist:copy": "cp -r build dist/server && find dist/server -name \"*.d.ts\" -type f -delete && cp -r src/metrics/resources/docs dist/server/metrics/resources && cp ./package*.json dist",
     "dist:manifest": "tsx gen/manifest.ts",
     "dist:exec": "chmod 755 dist/server/index.js",
     "dist:dep": "cd dist && npm install --omit=dev && cd ..",
@@ -25,7 +25,8 @@
     "dist:mcpb": "mkdir -p mcpb && mcpb pack dist mcpb/commercelayer-metrics.mcpb",
     "dist": "pnpm dist:clean && pnpm dist:copy && pnpm dist:manifest && pnpm dist:exec && pnpm dist:dep && pnpm dist:test",
     "mcpb": "pnpm dist && pnpm dist:mcpb",
-    "release": "pnpm build && pnpm lint && pnpm test && pnpm mcpb"
+    "release": "pnpm build && pnpm lint && pnpm test && pnpm mcpb",
+    "prepack": "pnpm build"
   },
   "keywords": [
     "ai",
@@ -50,8 +51,9 @@
     "@commercelayer/eslint-config-ts": "^2.2.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^24.10.0",
+    "@types/node": "^24.10.1",
     "conventional-changelog-conventionalcommits": "^9.1.0",
+    "cpy-cli": "^6.0.0",
     "dotenv": "^17.2.3",
     "eslint": "^8.57.1",
     "pnpm": "^10.21.0",
