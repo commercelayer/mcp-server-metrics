@@ -31,7 +31,6 @@ const useCaseTool: McpServerTool = {
   name: 'customers_that_bought_a_specific_product',
   description: 'How to use the Metrics API to get the total number of customers that bought a specific product or bundle',
   inputSchema: {
-    // accessToken: z.string().describe('Access token to use with the API'),
     filter: z.any().optional().describe('Narrow the results of the query by date or any other parameter available for filtering the selected resource')
   },
   callback: async ({ payload, filter }, { authInfo }) => {

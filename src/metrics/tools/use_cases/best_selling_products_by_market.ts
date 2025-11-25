@@ -52,7 +52,6 @@ const useCaseTool: McpServerTool = {
   name: 'best-selling-products-by-market',
   description: 'How to use the Metrics API to get the Top N best-selling products for each of your organization\'s market',
   inputSchema: {
-    // accessToken: z.string().describe('Access token to use with the API'),
     payload: z.strictObject({
       limit: z.number().int().min(1).max(20).optional().describe('The maximum number of records shown in the response'),
     }).optional().describe('The body payload to use for the request'),

@@ -48,7 +48,6 @@ const useCaseTool: McpServerTool = {
   name: 'orders-by-shipment-status-and-shipping-method-name',
   description: 'How to use the Metrics API to get the total number of orders of your organization, grouped by the associated shipment status and the related shipping method name',
   inputSchema: {
-    // accessToken: z.string().describe('Access token to use with the API'),
     payload: z.strictObject({
       limit: z.number().int().min(1).max(20).optional().describe('The maximum number of records shown in the response')
     }).optional().describe('The body payload to use for the request'),

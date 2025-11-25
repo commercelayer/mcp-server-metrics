@@ -59,7 +59,6 @@ const useCaseTool: McpServerTool = {
   name: 'orders-by-resource-error-code-and-message',
   description: 'How to use the Metrics API to check the errors associated with the orders of your organization (if any)',
   inputSchema: {
-    // accessToken: z.string().describe('Access token to use with the API'),
     payload: z.strictObject({
       limit: z.number().int().min(1).max(20).optional().describe('The maximum number of records shown in the response')
     }).optional().describe('The body payload to use for the request'),

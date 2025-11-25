@@ -48,7 +48,6 @@ const useCaseTool: McpServerTool = {
   name: 'top-10-spenders-by-currency',
   description: 'How to use the Metrics API to get the top spenders among your customers and know how their total purchase amount is divided by currency',
   inputSchema: {
-    // accessToken: z.string().describe('Access token to use with the API'),
     payload: z.strictObject({
       limit: z.number().int().min(1).max(20).optional().describe('The maximum number of records shown in the response')
     }).optional().describe('The body payload to use for the request'),

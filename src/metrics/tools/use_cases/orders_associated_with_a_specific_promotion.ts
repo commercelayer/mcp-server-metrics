@@ -50,7 +50,6 @@ const useCaseTool: McpServerTool = {
   name: 'orders-associated-with-a-specific-promotion',
   description: 'How to use the Metrics API to get the total number of orders that triggered a specific promotion',
   inputSchema: {
-    // accessToken: z.string().describe('Access token to use with the API'),
     filter: z.strictObject({
       date_from: z.string().datetime().optional().describe('The lower limit of the date and time range used to filter the collected records (required if you specified date_to)'),
       date_to: z.string().datetime().optional().describe('The upper limit of the date and time range used to filter the collected records (required if you specified date_from)'),

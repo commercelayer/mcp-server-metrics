@@ -52,7 +52,6 @@ const useCaseTool: McpServerTool = {
   name: 'last-carts-with-a-specific-product-from-a-specific-market',
   description: 'How to use the Metrics API to get the most recently created carts containing a specific SKU, from a specific market',
   inputSchema: {
-    // accessToken: z.string().describe('Access token to use with the API'),
     payload: z.strictObject({
       limit: z.number().int().min(1).max(20).optional().describe('The maximum number of records shown in the response')
     }).optional().describe('The body payload to use for the request'),

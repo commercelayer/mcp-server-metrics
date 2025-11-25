@@ -40,7 +40,6 @@ const useCaseTool: McpServerTool = {
   name: 'number-of-products-per-order-by-country',
   description: 'How to use the Metrics API to get mixed stats about the number of SKUs included in the orders of your organization, grouped by different countries',
   inputSchema: {
-    // accessToken: z.string().describe('Access token to use with the API'),
     payload: z.strictObject({
       limit: z.number().int().min(1).max(100).optional().describe('The maximum number of records shown in the response')
     }).optional().describe('The body payload to use for the request'),

@@ -29,7 +29,6 @@ const useCaseTool: McpServerTool = {
   name: 'frequently-bought-together-products',
   description: 'How to use the Metrics API to get the products that have been most frequently bought together with other ones',
   inputSchema: {
-    // accessToken: z.string().describe('Access token to use with the API'),
     filter: z.strictObject({
       item_ids: z.array(z.string()).describe('A list of SKU or bundle IDs associated as line items to one or more orders'),
     }).describe('Narrow the results of the query by date or any other parameter available for filtering the selected resource')

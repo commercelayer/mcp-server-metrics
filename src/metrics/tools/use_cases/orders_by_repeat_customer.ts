@@ -44,7 +44,6 @@ const useCaseTool: McpServerTool = {
   name: 'orders-by-repeat-customer',
   description: 'How to use the Metrics API to get the total number of orders of your organization, grouped by customers that bought from you more than once',
   inputSchema: {
-    // accessToken: z.string().describe('Access token to use with the API'),
     payload: z.strictObject({
       limit: z.number().int().min(1).max(100).optional().describe('The maximum number of records shown in the response')
     }).optional().describe('The body payload to use for the request'),
