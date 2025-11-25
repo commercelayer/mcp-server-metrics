@@ -7,7 +7,7 @@ import { log } from "./log.js"
 
 export function callToolResult(response: McpServerToolTextResponse | CallToolResult): CallToolResult {
   const result: CallToolResult = response
-  if (!Object.hasOwn(result, 'isError')) result.isError = response.content.some(c => c.error)
+  if (!Object.hasOwn(result, 'isError')) result.isError = response.content.some((c: any) => c.error)
   return result
 }
 

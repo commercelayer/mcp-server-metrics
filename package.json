@@ -55,7 +55,7 @@
   "dependencies": {
     "@commercelayer/js-auth": "^6.7.2",
     "@commercelayer/sdk": "^6.50.0",
-    "@modelcontextprotocol/sdk": "^1.21.1",
+    "@modelcontextprotocol/sdk": "^1.22.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
@@ -68,7 +68,7 @@
     "cpy-cli": "^6.0.0",
     "dotenv": "^17.2.3",
     "eslint": "^8.57.1",
-    "pnpm": "^10.21.0",
+    "pnpm": "^10.23.0",
     "semantic-release": "^25.0.2",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
