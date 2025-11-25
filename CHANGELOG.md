@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/commercelayer/mcp-server-metrics/compare/v1.0.0...v1.1.0) (2025-11-25)
+
+### Features
+
+* add filter schema ([00a14b3](https://github.com/commercelayer/mcp-server-metrics/commit/00a14b3424ac2c1f66e7284708b9b329c3837873))
+
 ## 1.0.0 (2025-11-11)
 
 ### Features
