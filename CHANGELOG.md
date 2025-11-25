@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/commercelayer/mcp-server-metrics/compare/v1.1.0...v1.1.1) (2025-11-25)
+
+### Bug Fixes
+
+* fix filter object type ([82f4be4](https://github.com/commercelayer/mcp-server-metrics/commit/82f4be4f24b9f0f09d7bf23297a18b37e2a2ceb3))
+
 ## [1.1.0](https://github.com/commercelayer/mcp-server-metrics/compare/v1.0.0...v1.1.0) (2025-11-25)
 
 ### Features
