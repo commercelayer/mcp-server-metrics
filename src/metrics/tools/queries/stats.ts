@@ -17,9 +17,9 @@ export default function statsTool(resource: MetricsResource, values: {
     name: `${resource}-stats`,
     description: `Run the stats function on ${resource}`,
     inputSchema: {
-        payload: z.strictObject({
-        field: z.enum(fieldValues).describe('The field you want the metrics or statistics computed on'),
-        operator: z.enum(operatorValues).describe('The computing operator')
+      payload: z.strictObject({
+        field: z.enum(fieldValues).describe(`The field you want the metrics or statistics computed on. Possible values are: ${fieldValues.join(', ')}`),
+        operator: z.enum(operatorValues).describe(`The computing operator. Possible values are: ${operatorValues.join(', ')}`)
       }).describe('The body payload to use for the request'),
       filter: metricsFilter(resource)
     },

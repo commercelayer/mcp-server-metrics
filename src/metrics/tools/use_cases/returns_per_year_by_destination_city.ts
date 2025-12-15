@@ -48,7 +48,7 @@ const useCaseTool: McpServerTool = {
   description: 'How to use the Metrics API to get the total number of returns requested for your orders, grouped by year and destination city',
   inputSchema: {
     payload: z.strictObject({
-      interval: z.enum(intervalValues).optional().describe('The time interval over which the metrics / stats are computed. The results will be aggregated by date accordingly'),
+      interval: z.enum(intervalValues).optional().describe(`The time interval over which the metrics / stats are computed. The results will be aggregated by date accordingly. Possible values are: ${intervalValues.join(', ')}`),
     }).optional().describe('The body payload to use for the request'),
     filter: z.strictObject({
       date_from: z.string().datetime().optional().describe('The lower limit of the date and time range used to filter the collected records (required if you specified date_to)'),

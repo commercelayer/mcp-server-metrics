@@ -55,7 +55,7 @@ const useCaseTool: McpServerTool = {
   description: 'How to use the Metrics API to get the total number of orders of your organization, grouped by different currencies',
   inputSchema: {
     payload: z.strictObject({
-      limit: z.number().int().min(1).max(100).optional().describe('The maximum number of records shown in the response')
+      limit: z.number().int().min(1).max(100).optional().describe('The maximum number of records shown in the response (1-100)')
     }).optional().describe('The body payload to use for the request'),
     filter: z.strictObject({
       date_from: z.string().datetime().optional().describe('The lower limit of the date and time range used to filter the collected records (required if you specified date_to)'),

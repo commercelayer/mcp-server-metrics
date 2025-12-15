@@ -1,6 +1,6 @@
 {
   "name": "@commercelayer/mcp-server-metrics",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Commerce Layer Metrics MCP server",
   "type": "module",
   "main": "index.js",
@@ -54,8 +54,8 @@
   },
   "dependencies": {
     "@commercelayer/js-auth": "^6.7.2",
-    "@commercelayer/sdk": "^6.50.0",
-    "@modelcontextprotocol/sdk": "^1.21.1",
+    "@commercelayer/sdk": "^6.50.1",
+    "@modelcontextprotocol/sdk": "^1.24.3",
     "zod": "^3.25.76"
   },
   "devDependencies": {
@@ -63,14 +63,14 @@
     "@commercelayer/eslint-config-ts": "^2.2.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^24.10.1",
+    "@types/node": "^24.10.4",
     "conventional-changelog-conventionalcommits": "^9.1.0",
     "cpy-cli": "^6.0.0",
     "dotenv": "^17.2.3",
     "eslint": "^8.57.1",
-    "pnpm": "^10.21.0",
+    "pnpm": "^10.26.0",
     "semantic-release": "^25.0.2",
-    "tsx": "^4.20.6",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "publishConfig": {

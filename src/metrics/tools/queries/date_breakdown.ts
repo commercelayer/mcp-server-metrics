@@ -19,10 +19,10 @@ export default function dateBreakdownTool(resource: MetricsResource, values: {
     description: `Run the date-breakdown function on ${resource}`,
     inputSchema: {
         payload: z.strictObject({
-        by: z.enum(byValues).describe('The field you want the results of the query aggragated by'),
-        field: z.enum(fieldValues).describe('The field you want the metrics or statistics computed on'),
-        operator: z.enum(operatorValues).describe('The computing operator'),
-        interval: z.enum(intervalValues).optional().describe('The time interval over which the metrics / stats are computed. The results will be aggregated by date accordingly'),
+        by: z.enum(byValues).describe(`The field you want the results of the query aggragated by. Possibble values are: ${byValues.join(', ')}`),
+        field: z.enum(fieldValues).describe(`The field you want the metrics or statistics computed on. Possibble values are: ${fieldValues.join(', ')}`),
+        operator: z.enum(operatorValues).describe(`The computing operator. Possible values are: ${operatorValues.join(', ')} (the values may vary based on the selected field)`),
+        interval: z.enum(intervalValues).optional().describe(`The time interval over which the metrics / stats are computed. The results will be aggregated by date accordingly. Possible values are: ${intervalValues.join(', ')}.`),
       }).describe('The body payload to use for the request'),
       filter: metricsFilter(resource)
     },

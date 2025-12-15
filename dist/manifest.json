@@ -1,7 +1,7 @@
 {
   "manifest_version": "0.2",
   "name": "Commerce Layer Metrics",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Commerce Layer Metrics MCP server",
   "long_description": "The Metrics Local MCP Server exposes a set of tools to interact with Commerce Layer [Metrics API](https://docs.commercelayer.io/metrics) and enables you to extract almost any kind of data information from your organization order, return, or cart history.",
   "author": {

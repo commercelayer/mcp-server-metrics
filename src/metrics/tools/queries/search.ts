@@ -19,10 +19,10 @@ export default function searchTool(resource: MetricsResource, values: {
     description: `Run the search function on ${resource}`,
     inputSchema: {
         payload: z.strictObject({
-        limit: z.number().int().min(1).max(100).optional().describe('The maximum number of records shown in the response'),
-        sort: z.enum(sortValues).optional().describe('The way you want the results of the query to be sorted'),
-        sort_by: z.enum(sortByValues).optional().describe('The date field you want the results of the query sorted by'),
-        fields: z.array(z.enum(fieldValues)).describe('The list of fields you want to be returned for each record in the response'),
+        limit: z.number().int().min(1).max(100).optional().describe('The maximum number of records shown in the response (1-100)'),
+        sort: z.enum(sortValues).optional().describe(`The way you want the results of the query to be sorted. Possible values are: ${sortValues.join(', ')}`),
+        sort_by: z.enum(sortByValues).optional().describe(`The date field you want the results of the query sorted by. Possible values are: ${sortByValues.join(', ')}`),
+        fields: z.array(z.enum(fieldValues)).describe(`The list of fields you want to be returned for each record in the response. Possible values are: ${fieldValues.join(', ')}`),
         cursor: z.string().optional().describe('The cursor pointing to a specific page in the paginated search results')
       }).describe('The body payload to use for the request'),
       filter: metricsFilter(resource)
