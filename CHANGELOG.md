@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/commercelayer/mcp-server-metrics/compare/v1.1.1...v1.2.0) (2025-12-15)
+
+### Features
+
+* improve tools descriptions ([cdf3fdb](https://github.com/commercelayer/mcp-server-metrics/commit/cdf3fdb6622184fbbad1b242c5b6832a0457ed7c))
+
 ## [1.1.1](https://github.com/commercelayer/mcp-server-metrics/compare/v1.1.0...v1.1.1) (2025-11-25)
 
 ### Bug Fixes
