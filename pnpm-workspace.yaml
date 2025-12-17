@@ -1,0 +1,3 @@
+peerDependencyRules:
+  allowedVersions:
+    "@typescript-eslint/eslint-plugin": "7.18.x"

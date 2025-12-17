@@ -55,7 +55,7 @@
   "dependencies": {
     "@commercelayer/js-auth": "^6.7.2",
     "@commercelayer/sdk": "^6.50.1",
-    "@modelcontextprotocol/sdk": "^1.24.3",
+    "@modelcontextprotocol/sdk": "^1.25.1",
     "zod": "^3.25.76"
   },
   "devDependencies": {
