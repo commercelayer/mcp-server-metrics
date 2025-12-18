@@ -7,7 +7,7 @@
   "author": "Pierluigi Viti <pierluigi@commercelayer.io>",
   "license": "MIT",
   "exports": {
-    ".": "./index.js",
+    ".": "./lib/index.js",
     "./tools": {
       "default": "./lib/metrics/tools/index.js",
       "types": "./lib/metrics/tools/index.d.ts"
