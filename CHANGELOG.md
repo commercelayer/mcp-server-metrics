@@ -1,3 +1,9 @@
+## [1.2.3](https://github.com/commercelayer/mcp-server-metrics/compare/v1.2.2...v1.2.3) (2025-12-18)
+
+### Bug Fixes
+
+* fix exports ([f88ecec](https://github.com/commercelayer/mcp-server-metrics/commit/f88ecec3e5d61cbbf147d85f8dc3c45e94b3b837))
+
 ## [1.2.2](https://github.com/commercelayer/mcp-server-metrics/compare/v1.2.1...v1.2.2) (2025-12-17)
 
 ### Bug Fixes
