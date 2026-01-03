@@ -1,3 +1,9 @@
+## [1.2.4](https://github.com/commercelayer/mcp-server-metrics/compare/v1.2.3...v1.2.4) (2026-01-03)
+
+### Bug Fixes
+
+* fix get and delete commands ([c72e1b1](https://github.com/commercelayer/mcp-server-metrics/commit/c72e1b1fd5be07648a7d0ce5d8d5cef44cede7ec))
+
 ## [1.2.3](https://github.com/commercelayer/mcp-server-metrics/compare/v1.2.2...v1.2.3) (2025-12-18)
 
 ### Bug Fixes
